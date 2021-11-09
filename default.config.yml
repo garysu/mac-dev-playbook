@@ -58,7 +58,7 @@ dockitems_persist:
   path: "/Applications/Microsoft OneNote.app/"
   pos: 11
 - name: "Microsoft Teams"
-  path: "/Applications/Microsoft Teams.app/"
+  path: "/Applications/Edge Apps/Microsoft Teams.app/"
   pos: 12
 - name: "iTerm"
   path: "/Applications/iTerm.app/"
@@ -90,9 +90,18 @@ dockitems_persist:
 - name: "Kodi"
   path: "/Applications/Kodi.app/"
   pos: 22
+- name: "UTM"
+  path: "/Applications/UTM.app/"
+  pos: 23
+- name: "Feedly"
+  path: "/Applications/Edge Apps/Feedly.app/"
+  pos: 24
+- name: "WatchNewsPro"
+  path: "/Applications/Edge Apps/WatchNewsPro App.app/"
+  pos: 25
 - name: "System Preferences"
   path: "/Applications/System Preferences.app/"
-  pos: 23
+  pos: 26
 
 configure_sudoers: false
 sudoers_custom_config: ''
