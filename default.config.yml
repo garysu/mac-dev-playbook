@@ -33,60 +33,66 @@ dockitems_persist:
 - name: "FaceTime"
   path: "/Applications/FaceTime.app/"
   pos: 3
+- name: "Slack"
+  path: "/Applications/Slack.app/"
+  pos: 4
 - name: "Maps"
   path: "/Applications/Maps.app/"
-  pos: 4
+  pos: 5
 - name: "Microsoft Outlook"
   path: "/Applications/Microsoft Outlook.app/"
-  pos: 5
+  pos: 6
 - name: "Microsoft PowerPoint"
   path: "/Applications/Microsoft PowerPoint.app/"
-  pos: 6
+  pos: 7
 - name: "Microsoft Word"
   path: "/Applications/Microsoft Word.app/"
-  pos: 7
+  pos: 8
 - name: "Microsoft PowerPoint"
   path: "/Applications/Microsoft PowerPoint.app/"
-  pos: 8
+  pos: 9
 - name: "Microsoft Excel"
   path: "/Applications/Microsoft Excel.app/"
-  pos: 9
+  pos: 10
 - name: "Microsoft OneNote"
   path: "/Applications/Microsoft OneNote.app/"
-  pos: 10
+  pos: 11
 - name: "Microsoft Teams"
   path: "/Applications/Microsoft Teams.app/"
-  pos: 11
+  pos: 12
 - name: "iTerm"
   path: "/Applications/iTerm.app/"
-  pos: 12
+  pos: 13
 - name: "Kui"
   path: "/Applications/Kui.app/"
-  pos: 13
+  pos: 14
 - name: "Visual Studio Code"
   path: "/Applications/Visual Studio Code.app/"
-  pos: 14
+  pos: 15
 - name: "GoLand"
   path: "/Applications/GoLand.app/"
-  pos: 15
+  pos: 16
 - name: "GitKraken"
   path: "/Applications/GitKraken.app/"
-  pos: 16
+  pos: 17
 - name: "Kui"
   path: "/Applications/Kui.app/"
-  pos: 17
+  pos: 18
 - name: "Lens"
   path: "/Applications/Lens.app/"
-  pos: 18
+  pos: 19
 - name: "Zoom"
   path: "/Applications/zoom.us.app/"
-  pos: 19
+  pos: 20
 - name: "LastPass"
   path: "/Applications/LastPass.app/"
-  pos: 20
+  pos: 21
+- name: "Kodi"
+  path: "/Applications/Kodi.app/"
+  pos: 22
 - name: "System Preferences"
   path: "/Applications/System Preferences.app/"
-  pos: 20
+  pos: 23
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -105,16 +111,25 @@ dotfiles_files:
   - .gitconfig
   - .aliases
   - .vscode
+  - .k8slens
+  - .gitkraken
+  - .talos
+  - .kube
+
   
 
 homebrew_installed_packages:
   - autoconf
+  - bash
+  - docker
   - gettext
   - git
   - go
   - gpg
+  - helm
   - httpie
   - iperf
+  - jq
   - kubectl
   - libevent
   - nmap
@@ -124,7 +139,9 @@ homebrew_installed_packages:
   - readline
   - openssl
   - pv
+  - watch
   - wget
+  - yq
   - zsh
   - zsh-history-substring-search
 
@@ -157,6 +174,7 @@ homebrew_cask_apps:
   - raspberry-pi-imager
   - slack
   - snagit
+  - utm
   - vagrant
   - visual-studio-code
   - vlc
@@ -185,10 +203,10 @@ npm_packages: []
 # - name: webpack
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
-pip_packages: []
-# - name: mkdocs
-#   state: present # present/absent/latest, default: present
-#   version: "0.16.3" # default: N/A
+pip_packages: 
+  - name: mkdocs
+    state: present # present/absent/latest, default: present
+    version: "1.2.3" # default: N/A
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
